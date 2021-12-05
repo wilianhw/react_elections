@@ -13,3 +13,8 @@ export async function apiGetAllCandidates() {
     const { data } = await axios.get("/candidates");
     return data;
 }
+
+export async function aptGetElectionByCityIdFrom(cityId) {
+    const { data } = await axios.get(`/election?cityId=${cityId}`);
+    return data;
+}
